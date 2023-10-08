@@ -1,11 +1,7 @@
 def answer(hours, minutes, delivery_time):
     hours_result = str((hours + (delivery_time + minutes) // 60) % 24)
     minutes_result = str((minutes + delivery_time) % 60)
-    if len(hours_result) == 1:
-        hours_result = "0" + hours_result
-    if len(minutes_result) == 1:
-        minutes_result = "0" + minutes_result
-    print(f"{hours_result}:{minutes_result}")
+    print(f"{hours_result:0>2}:{minutes_result:0>2}")
 
 
 def main():
